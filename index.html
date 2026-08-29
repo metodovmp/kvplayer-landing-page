@@ -12,12 +12,10 @@
   h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:42px;line-height:1.1;text-align:center;color:#fff;text-transform:uppercase;margin:0}
   .sub{color:#C7C7CC;text-align:center;font-size:18px;margin:18px auto 0;line-height:1.55;max-width:780px}
   .sub strong{color:#fff}
-  /* EYEBROW VSL */
-  .vsl-eyebrow{text-align:center;color:#00F5FF;font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:1.5px;margin:38px 0 12px;animation:pulse 1.5s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.6}}
-  .vsl-wrapper{margin:0 auto 22px;background:#050A14;border:1px solid rgba(0,245,255,0.35);border-radius:16px;padding:10px;box-shadow:0 0 35px rgba(0,245,255,0.18);position:relative;aspect-ratio:16/9;overflow:hidden}
-  .vsl-wrapper iframe{width:100%;height:100%;border:0;border-radius:10px}
-  .vsl-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#333;font-size:14px;border:1px dashed #1A2333;border-radius:10px}
+  .vsl-eyebrow{text-align:center;color:#00F5FF;font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:1.5px;margin:38px 0 14px}
+  .vsl-wrapper{margin:0 auto 26px;background:#050A14;border:1px solid rgba(0,245,255,0.35);border-radius:20px;padding:10px;box-shadow:0 0 35px rgba(0,245,255,0.18);position:relative;aspect-ratio:16/9;overflow:hidden}
+  .vsl-wrapper iframe{width:100%;height:100%;border:0;border-radius:14px}
+  .vsl-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#333;font-size:14px;border:1px dashed #1A2333;border-radius:14px}
   .cta-center{text-align:center;margin-bottom:10px}
   .section{margin-top:80px;border-top:1px solid #111;padding-top:60px}
   h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:28px;color:#fff;text-align:center;text-transform:uppercase;line-height:1.2;margin:0}
@@ -43,14 +41,17 @@
   .kv-check{color:#00FF88;font-weight:800}
   .cta-section{margin-top:80px;border-top:1px solid #111;padding-top:60px;text-align:center}
   .cta-sub{color:#C7C7CC;font-size:16px;line-height:1.6;max-width:650px;margin:0 auto}
-  .btn{display:inline-block;background:linear-gradient(90deg,#00F5FF,#00FF88);color:#000;font-family:'Montserrat',sans-serif;font-weight:800;padding:18px 35px;border-radius:8px;text-decoration:none;text-transform:uppercase;margin-top:30px;transition:0.3s}
-  .btn:hover{transform:scale(1.05);box-shadow:0 0 20px rgba(0,245,255,0.5)}
-  .small{color:#666;font-size:13px;margin-top:15px}
+  
+  /* BOTÃO OVAL OTIMIZADO */
+  .btn-oval{display:inline-block;background:linear-gradient(90deg,#00F5FF,#00FF88);color:#000;font-family:'Montserrat',sans-serif;font-weight:900;padding:21px 48px;border-radius:999px;text-decoration:none;text-transform:uppercase;margin-top:30px;transition:0.3s;box-shadow:0 8px 25px rgba(0,245,255,0.35);letter-spacing:0.5px;font-size:15px}
+  .btn-oval:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 12px 35px rgba(0,245,255,0.55)}
+  
+  .small{color:#666;font-size:13px;margin-top:16px}
   .faq{margin-top:80px;border-top:1px solid #111;padding-top:60px}
   .faq-item{border-bottom:1px solid #1A2333;padding:22px 0}
   .faq-question{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:#fff;margin-bottom:8px}
   .faq-answer{color:#C7C7CC;font-size:15px;line-height:1.6}
-  @media(max-width:600px){.container{padding:30px 16px 50px}h1{font-size:30px}.sub{font-size:16px}h2{font-size:23px}.question{font-size:20px}.btn{width:100%;box-sizing:border-box;padding:17px 15px;font-size:14px}}
+  @media(max-width:600px){.container{padding:30px 16px 50px}h1{font-size:30px}.sub{font-size:16px}h2{font-size:23px}.question{font-size:20px}.btn-oval{width:100%;box-sizing:border-box;padding:20px 20px;font-size:14px}}
 </style>
 </head>
 <body>
@@ -59,17 +60,13 @@
   <h1>PARE DE PAGAR MENSALIDADE E DE DESPERDIÇAR VIEWS</h1>
   <p class="sub">Um player pré-pago em que a visualização só é contabilizada quando o visitante clica no PLAY.<br><strong>Sem mensalidade. Sem gastar seu saldo com quem nem deu PLAY.</strong></p>
 
-  <!-- EYEBROW + VSL -->
-  <div class="vsl-eyebrow">👇 DÊ O PLAY E ENTENDA COMO ECONOMIZAR SEU SALDO EM 47s</div>
+  <div class="vsl-eyebrow">DÊ O PLAY E ENTENDA COMO ECONOMIZAR SEU SALDO EM 47s</div>
   <div class="vsl-wrapper">
-    <!-- COLE SEU IFRAME DA KV AQUI DENTRO -->
-    <!-- Exemplo: <iframe src="SEU_LINK_KVPLAYER"></iframe> -->
     <div class="vsl-placeholder">[ COLE AQUI O IFRAME DO SEU VSL 16:9 ]</div>
   </div>
 
-  <!-- CTA 1 - PRIMEIRA DOBRA -->
   <div class="cta-center">
-    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn">QUERO MINHAS 50 VIEWS GRÁTIS →</a>
+    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval">QUERO MINHAS 50 VIEWS GRÁTIS →</a>
     <p class="small">Ativação imediata • Teste gratuito • Sem mensalidade</p>
   </div>
 
@@ -92,9 +89,9 @@
   <div class="section">
     <h2>E TEM MAIS: <span>VOCÊ NÃO FICA PRESO A UMA MENSALIDADE</span></h2>
     <div class="grid-3">
-      <div class="card"><div class="card-num">01 — CLICK REAL</div><h3>View só no Play</h3><p>A view é contabilizada quando o visitante efetivamente dá PLAY. Seu saldo é direcionado para quem iniciou o vídeo.</p></div>
+      <div class="card"><div class="card-num">01 — CLICK REAL</div><h3>View só no Play</h3><p>A view é contabilizada quando o visitante efetivamente dá PLAY.</p></div>
       <div class="card"><div class="card-num">02 — PRÉ-PAGO</div><h3>Use quando precisar</h3><p>Compre o pacote que faz sentido para sua operação. Sem mensalidade recorrente.</p></div>
-      <div class="card"><div class="card-num">03 — 50 VIEWS GRÁTIS</div><h3>Teste antes de escalar</h3><p>Cadastre-se e tenha 50 views gratuitas para testar a plataforma antes de decidir escalar.</p></div>
+      <div class="card"><div class="card-num">03 — 50 VIEWS GRÁTIS</div><h3>Teste antes de escalar</h3><p>Cadastre-se e tenha 50 views gratuitas para testar a plataforma.</p></div>
     </div>
   </div>
 
@@ -116,7 +113,7 @@
   <div class="cta-section">
     <h2>QUER TESTAR NA PRÁTICA?</h2>
     <p class="cta-sub">Teste o modelo de contabilização por PLAY e veja como a KVPlayer funciona na sua própria operação.</p>
-    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn">QUERO TESTAR A KVPLAYER</a>
+    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval">QUERO TESTAR A KVPLAYER</a>
     <p class="small">Ativação imediata • 50 views grátis • Modelo pré-pago</p>
   </div>
 
@@ -125,15 +122,15 @@
     <div class="faq-item"><div class="faq-question">“PRECISO PAGAR MENSALIDADE?”</div><div class="faq-answer">Não. A proposta da KVPlayer é trabalhar com modelo pré-pago.</div></div>
     <div class="faq-item"><div class="faq-question">“E SE A PESSOA NÃO DER PLAY?”</div><div class="faq-answer">A visualização só é contabilizada após o clique no PLAY.</div></div>
     <div class="faq-item"><div class="faq-question">“E SE ELA CLICAR VÁRIAS VEZES?”</div><div class="faq-answer">Múltiplos cliques da mesma pessoa não geram múltiplas visualizações.</div></div>
-    <div class="faq-item"><div class="faq-question">“POSSO TESTAR ANTES?”</div><div class="faq-answer">Sim. O cadastro oferece 50 views gratuitas para você testar.</div></div>
+    <div class="faq-item"><div class="faq-question">“POSSO TESTAR ANTES?”</div><div class="faq-answer">Sim. O cadastro oferece 50 views gratuitas.</div></div>
   </div>
 
   <div class="cta-section">
     <h2>SEU PLAYER NÃO PRECISA SER MAIS UM CUSTO FIXO</h2>
     <p class="cta-sub">Você já investe em tráfego, página e VSL. Teste uma alternativa com modelo pré-pago e contabilização baseada no PLAY.</p>
-    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn">QUERO MINHAS 50 VIEWS GRÁTIS</a>
+    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval">QUERO MINHAS 50 VIEWS GRÁTIS</a>
     <p class="small">Teste a KVPlayer • 50 views grátis • Sem mensalidade recorrente</p>
   </div>
 </div>
 </body>
-  </html>
+</html>
