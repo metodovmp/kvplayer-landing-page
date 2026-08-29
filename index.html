@@ -3,704 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
 <style>
-  body {
-    margin: 0;
-    background: #000000;
-    font-family: 'Inter', sans-serif;
-    color: #fff;
-  }
-
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px 20px 70px;
-  }
-
-  .logo {
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    letter-spacing: 2px;
-    font-size: 22px;
-    margin-bottom: 40px;
-  }
-
-  .logo span {
-    background: linear-gradient(90deg, #00F5FF, #00FF88);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 42px;
-    line-height: 1.1;
-    text-align: center;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    margin: 0;
-  }
-
-  .sub {
-    color: #C7C7CC;
-    text-align: center;
-    font-size: 18px;
-    margin: 18px auto 0;
-    line-height: 1.55;
-    max-width: 780px;
-  }
-
-  .sub strong {
-    color: #FFFFFF;
-  }
-
-  .vsl-wrapper {
-    margin: 40px auto 20px;
-    background: #050A14;
-    border: 1px solid rgba(0,245,255,0.3);
-    border-radius: 16px;
-    padding: 10px;
-    box-shadow: 0 0 30px rgba(0,245,255,0.15);
-    position: relative;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .vsl-wrapper::before {
-    content: '[ LUGAR DO SEU VSL 16:9 ]';
-    color: #555;
-    font-size: 14px;
-  }
-
-  .cta-center {
-    text-align: center;
-    color: #C7C7CC;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-  }
-
-  .section {
-    margin-top: 80px;
-    border-top: 1px solid #111;
-    padding-top: 60px;
-  }
-
-  h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 28px;
-    color: #fff;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 1.2;
-    margin: 0;
-  }
-
-  h2 span {
-    color: #C7C7CC;
-    font-weight: 700;
-  }
-
-  .problem {
-    max-width: 720px;
-    margin: 28px auto 0;
-    text-align: center;
-  }
-
-  .problem p {
-    color: #C7C7CC;
-    font-size: 17px;
-    line-height: 1.75;
-    margin: 10px 0;
-  }
-
-  .question {
-    margin: 32px 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
-    font-weight: 900;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    line-height: 1.25;
-  }
-
-  .highlight {
-    color: #00F5FF;
-  }
-
-  .mechanism {
-    background: linear-gradient(180deg, #0A121E 0%, #050A14 100%);
-    border: 1px solid #1A2333;
-    border-radius: 14px;
-    padding: 28px;
-    margin-top: 30px;
-    text-align: center;
-  }
-
-  .mechanism-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-    color: #fff;
-    margin-bottom: 12px;
-  }
-
-  .mechanism p {
-    color: #C7C7CC;
-    font-size: 16px;
-    line-height: 1.65;
-    margin: 0;
-  }
-
-  .mechanism strong {
-    color: #fff;
-  }
-
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
-    margin-top: 40px;
-  }
-
-  .card {
-    background: linear-gradient(180deg, #0A121E 0%, #050A14 100%);
-    border: 1px solid #1A2333;
-    border-radius: 12px;
-    padding: 25px;
-  }
-
-  .card-num {
-    color: #00F5FF;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-
-  .card h3 {
-    margin: 10px 0;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    color: #fff;
-  }
-
-  .card p {
-    color: #C7C7CC;
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  /* COMPARAÇÃO */
-
-  .comparison {
-    margin-top: 40px;
-    overflow-x: auto;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 620px;
-    background: #050A14;
-    border: 1px solid #1A2333;
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
-  th, td {
-    padding: 18px 16px;
-    text-align: left;
-    border-bottom: 1px solid #1A2333;
-  }
-
-  th {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    color: #FFFFFF;
-    background: #0A121E;
-    text-transform: uppercase;
-    font-size: 13px;
-  }
-
-  td {
-    color: #C7C7CC;
-    font-size: 14px;
-    line-height: 1.4;
-  }
-
-  td.kv {
-    color: #FFFFFF;
-    font-weight: 700;
-  }
-
-  .kv-check {
-    color: #00FF88;
-    font-weight: 800;
-  }
-
-  /* CTA */
-
-  .cta-section {
-    margin-top: 80px;
-    border-top: 1px solid #111;
-    padding-top: 60px;
-    text-align: center;
-  }
-
-  .cta-section h2 {
-    margin-bottom: 12px;
-  }
-
-  .cta-sub {
-    color: #C7C7CC;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 650px;
-    margin: 0 auto;
-  }
-
-  .btn {
-    display: inline-block;
-    background: linear-gradient(90deg, #00F5FF, #00FF88);
-    color: #000;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    padding: 18px 35px;
-    border-radius: 8px;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin-top: 30px;
-    transition: 0.3s;
-  }
-
-  .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0,245,255,0.5);
-  }
-
-  .small {
-    color: #666;
-    font-size: 13px;
-    margin-top: 15px;
-  }
-
-  /* FAQ */
-
-  .faq {
-    margin-top: 80px;
-    border-top: 1px solid #111;
-    padding-top: 60px;
-  }
-
-  .faq-item {
-    border-bottom: 1px solid #1A2333;
-    padding: 22px 0;
-  }
-
-  .faq-question {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    font-size: 17px;
-    color: #fff;
-    margin-bottom: 8px;
-  }
-
-  .faq-answer {
-    color: #C7C7CC;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  @media(max-width:600px) {
-
-    .container {
-      padding: 30px 16px 50px;
-    }
-
-    h1 {
-      font-size: 30px;
-    }
-
-    .sub {
-      font-size: 16px;
-    }
-
-    h2 {
-      font-size: 23px;
-    }
-
-    .question {
-      font-size: 20px;
-    }
-
-    .vsl-wrapper {
-      margin-top: 30px;
-    }
-
-    .btn {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 17px 15px;
-      font-size: 14px;
-    }
-  }
+  body{margin:0;background:#000;font-family:'Inter',sans-serif;color:#fff}
+  .container{max-width:900px;margin:0 auto;padding:40px 20px 70px}
+  .logo{text-align:center;font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:2px;font-size:22px;margin-bottom:40px}
+  .logo span{background:linear-gradient(90deg,#00F5FF,#00FF88);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:42px;line-height:1.1;text-align:center;color:#fff;text-transform:uppercase;margin:0}
+  .sub{color:#C7C7CC;text-align:center;font-size:18px;margin:18px auto 0;line-height:1.55;max-width:780px}
+  .sub strong{color:#fff}
+  /* EYEBROW VSL */
+  .vsl-eyebrow{text-align:center;color:#00F5FF;font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;letter-spacing:1.5px;margin:38px 0 12px;animation:pulse 1.5s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.6}}
+  .vsl-wrapper{margin:0 auto 22px;background:#050A14;border:1px solid rgba(0,245,255,0.35);border-radius:16px;padding:10px;box-shadow:0 0 35px rgba(0,245,255,0.18);position:relative;aspect-ratio:16/9;overflow:hidden}
+  .vsl-wrapper iframe{width:100%;height:100%;border:0;border-radius:10px}
+  .vsl-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#333;font-size:14px;border:1px dashed #1A2333;border-radius:10px}
+  .cta-center{text-align:center;margin-bottom:10px}
+  .section{margin-top:80px;border-top:1px solid #111;padding-top:60px}
+  h2{font-family:'Montserrat',sans-serif;font-weight:800;font-size:28px;color:#fff;text-align:center;text-transform:uppercase;line-height:1.2;margin:0}
+  h2 span{color:#C7C7CC;font-weight:700}
+  .problem{max-width:720px;margin:28px auto 0;text-align:center}
+  .problem p{color:#C7C7CC;font-size:17px;line-height:1.75;margin:10px 0}
+  .question{margin:32px 0;font-family:'Montserrat',sans-serif;font-size:24px;font-weight:900;color:#fff;text-transform:uppercase;line-height:1.25}
+  .mechanism{background:linear-gradient(180deg,#0A121E 0%,#050A14 100%);border:1px solid #1A2333;border-radius:14px;padding:28px;margin-top:30px;text-align:center}
+  .mechanism-title{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:#fff;margin-bottom:12px}
+  .mechanism p{color:#C7C7CC;font-size:16px;line-height:1.65;margin:0}
+  .mechanism strong{color:#fff}
+  .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:40px}
+  .card{background:linear-gradient(180deg,#0A121E 0%,#050A14 100%);border:1px solid #1A2333;border-radius:12px;padding:25px}
+  .card-num{color:#00F5FF;font-family:'Montserrat',sans-serif;font-weight:900;font-size:14px;letter-spacing:2px}
+  .card h3{margin:10px 0;font-family:'Montserrat',sans-serif;font-size:18px;color:#fff}
+  .card p{color:#C7C7CC;font-size:15px;line-height:1.6;margin:0}
+  .comparison{margin-top:40px;overflow-x:auto}
+  table{width:100%;border-collapse:collapse;min-width:620px;background:#050A14;border:1px solid #1A2333;border-radius:12px;overflow:hidden}
+  th,td{padding:18px 16px;text-align:left;border-bottom:1px solid #1A2333}
+  th{font-family:'Montserrat',sans-serif;font-weight:800;color:#fff;background:#0A121E;text-transform:uppercase;font-size:13px}
+  td{color:#C7C7CC;font-size:14px;line-height:1.4}
+  td.kv{color:#fff;font-weight:700}
+  .kv-check{color:#00FF88;font-weight:800}
+  .cta-section{margin-top:80px;border-top:1px solid #111;padding-top:60px;text-align:center}
+  .cta-sub{color:#C7C7CC;font-size:16px;line-height:1.6;max-width:650px;margin:0 auto}
+  .btn{display:inline-block;background:linear-gradient(90deg,#00F5FF,#00FF88);color:#000;font-family:'Montserrat',sans-serif;font-weight:800;padding:18px 35px;border-radius:8px;text-decoration:none;text-transform:uppercase;margin-top:30px;transition:0.3s}
+  .btn:hover{transform:scale(1.05);box-shadow:0 0 20px rgba(0,245,255,0.5)}
+  .small{color:#666;font-size:13px;margin-top:15px}
+  .faq{margin-top:80px;border-top:1px solid #111;padding-top:60px}
+  .faq-item{border-bottom:1px solid #1A2333;padding:22px 0}
+  .faq-question{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:#fff;margin-bottom:8px}
+  .faq-answer{color:#C7C7CC;font-size:15px;line-height:1.6}
+  @media(max-width:600px){.container{padding:30px 16px 50px}h1{font-size:30px}.sub{font-size:16px}h2{font-size:23px}.question{font-size:20px}.btn{width:100%;box-sizing:border-box;padding:17px 15px;font-size:14px}}
 </style>
 </head>
-
 <body>
-
 <div class="container">
+  <div class="logo">KV<span>PLAYER</span></div>
+  <h1>PARE DE PAGAR MENSALIDADE E DE DESPERDIÇAR VIEWS</h1>
+  <p class="sub">Um player pré-pago em que a visualização só é contabilizada quando o visitante clica no PLAY.<br><strong>Sem mensalidade. Sem gastar seu saldo com quem nem deu PLAY.</strong></p>
 
-  <!-- LOGO -->
-
-  <div class="logo">
-    KV<span>PLAYER</span>
+  <!-- EYEBROW + VSL -->
+  <div class="vsl-eyebrow">👇 DÊ O PLAY E ENTENDA COMO ECONOMIZAR SEU SALDO EM 47s</div>
+  <div class="vsl-wrapper">
+    <!-- COLE SEU IFRAME DA KV AQUI DENTRO -->
+    <!-- Exemplo: <iframe src="SEU_LINK_KVPLAYER"></iframe> -->
+    <div class="vsl-placeholder">[ COLE AQUI O IFRAME DO SEU VSL 16:9 ]</div>
   </div>
 
-
-  <!-- HERO -->
-
-  <h1>
-    PARE DE PAGAR MENSALIDADE E DE DESPERDIÇAR VIEWS
-  </h1>
-
-  <p class="sub">
-    Um player pré-pago em que a visualização só é contabilizada quando o visitante clica no PLAY.
-    <br>
-    <strong>Sem mensalidade. Sem gastar seu saldo com quem nem deu PLAY.</strong>
-  </p>
-
-
-  <!-- VSL -->
-
-  <div class="vsl-wrapper"></div>
-
+  <!-- CTA 1 - PRIMEIRA DOBRA -->
   <div class="cta-center">
-    → ASSISTA À EXPLICAÇÃO E VEJA COMO FUNCIONA
+    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn">QUERO MINHAS 50 VIEWS GRÁTIS →</a>
+    <p class="small">Ativação imediata • Teste gratuito • Sem mensalidade</p>
   </div>
 
-
-  <!-- PROBLEMA -->
-
   <div class="section">
-
-    <h2>
-      SE VOCÊ TRABALHA COM VSL,
-      <span>CADA VIEW TEM UM CUSTO</span>
-    </h2>
-
+    <h2>SE VOCÊ TRABALHA COM VSL, <span>CADA VIEW TEM UM CUSTO</span></h2>
     <div class="problem">
-
-      <p>
-        Você coloca sua VSL na página.
-      </p>
-
-      <p>
-        O visitante chega.
-      </p>
-
-      <p>
-        <strong style="color:#fff;">
-          Mas nem todo visitante dá PLAY.
-        </strong>
-      </p>
-
-      <div class="question">
-        POR QUE GASTAR UMA VIEW COM QUEM NEM ASSISTIU?
-      </div>
-
+      <p>Você coloca sua VSL na página.</p>
+      <p>O visitante chega.</p>
+      <p><strong style="color:#fff;">Mas nem todo visitante dá PLAY.</strong></p>
+      <div class="question">POR QUE GASTAR UMA VIEW COM QUEM NEM ASSISTIU?</div>
     </div>
-
-
-    <!-- MECANISMO -->
-
     <div class="mechanism">
-
-      <div class="mechanism-title">
-        CLICK REAL
-      </div>
-
-      <p>
-        Na KVPlayer, o modelo é simples:
-        <strong>o play precisa acontecer para a visualização ser contabilizada.</strong>
-      </p>
-
-      <p style="margin-top:15px;">
-        E se a mesma pessoa clicar novamente,
-        <strong>a visualização não é contada novamente.</strong>
-      </p>
-
-      <p style="margin-top:15px;">
-        Seu saldo fica mais alinhado com quem realmente iniciou o vídeo.
-      </p>
-
+      <div class="mechanism-title">CLICK REAL</div>
+      <p>Na KVPlayer, o modelo é simples: <strong>o play precisa acontecer para a visualização ser contabilizada.</strong></p>
+      <p style="margin-top:15px;">E se a mesma pessoa clicar novamente, <strong>a visualização não é contada novamente.</strong></p>
+      <p style="margin-top:15px;">Seu saldo fica mais alinhado com quem realmente iniciou o vídeo.</p>
     </div>
-
   </div>
 
-
-  <!-- DIFERENCIAIS -->
-
   <div class="section">
-
-    <h2>
-      E TEM MAIS:
-      <span>VOCÊ NÃO FICA PRESO A UMA MENSALIDADE</span>
-    </h2>
-
+    <h2>E TEM MAIS: <span>VOCÊ NÃO FICA PRESO A UMA MENSALIDADE</span></h2>
     <div class="grid-3">
-
-      <div class="card">
-
-        <div class="card-num">
-          01 — CLICK REAL
-        </div>
-
-        <h3>
-          View só no Play
-        </h3>
-
-        <p>
-          A view é contabilizada quando o visitante efetivamente dá PLAY.
-          Seu saldo é direcionado para quem iniciou o vídeo.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-num">
-          02 — PRÉ-PAGO
-        </div>
-
-        <h3>
-          Use quando precisar
-        </h3>
-
-        <p>
-          Compre o pacote que faz sentido para sua operação.
-          Sem mensalidade recorrente.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <div class="card-num">
-          03 — 50 VIEWS GRÁTIS
-        </div>
-
-        <h3>
-          Teste antes de escalar
-        </h3>
-
-        <p>
-          Cadastre-se e tenha 50 views gratuitas para testar a plataforma
-          antes de decidir escalar.
-        </p>
-
-      </div>
-
+      <div class="card"><div class="card-num">01 — CLICK REAL</div><h3>View só no Play</h3><p>A view é contabilizada quando o visitante efetivamente dá PLAY. Seu saldo é direcionado para quem iniciou o vídeo.</p></div>
+      <div class="card"><div class="card-num">02 — PRÉ-PAGO</div><h3>Use quando precisar</h3><p>Compre o pacote que faz sentido para sua operação. Sem mensalidade recorrente.</p></div>
+      <div class="card"><div class="card-num">03 — 50 VIEWS GRÁTIS</div><h3>Teste antes de escalar</h3><p>Cadastre-se e tenha 50 views gratuitas para testar a plataforma antes de decidir escalar.</p></div>
     </div>
-
   </div>
-
-
-  <!-- COMPARAÇÃO -->
 
   <div class="section">
-
-    <h2>
-      ENTENDA A DIFERENÇA
-    </h2>
-
+    <h2>ENTENDA A DIFERENÇA</h2>
     <div class="comparison">
-
       <table>
-
-        <thead>
-
-          <tr>
-            <th>Característica</th>
-            <th>Modelo tradicional</th>
-            <th>KVPlayer</th>
-          </tr>
-
-        </thead>
-
+        <thead><tr><th>Característica</th><th>Players com mensalidade</th><th>KVPlayer</th></tr></thead>
         <tbody>
-
-          <tr>
-            <td>Modelo de pagamento</td>
-            <td>Conforme a plataforma</td>
-            <td class="kv">
-              <span class="kv-check">✓</span> Pré-pago
-            </td>
-          </tr>
-
-          <tr>
-            <td>Quando a view é contabilizada</td>
-            <td>Conforme a regra da plataforma</td>
-            <td class="kv">
-              <span class="kv-check">✓</span> No PLAY
-            </td>
-          </tr>
-
-          <tr>
-            <td>Cliques repetidos</td>
-            <td>Conforme a regra da plataforma</td>
-            <td class="kv">
-              <span class="kv-check">✓</span> 1 view por pessoa
-            </td>
-          </tr>
-
-          <tr>
-            <td>Teste inicial</td>
-            <td>—</td>
-            <td class="kv">
-              <span class="kv-check">✓</span> 50 views grátis
-            </td>
-          </tr>
-
+          <tr><td>Modelo de pagamento</td><td>Mensalidade recorrente</td><td class="kv"><span class="kv-check">✓</span> Pré-pago</td></tr>
+          <tr><td>Quando a view é contabilizada</td><td>Normalmente ao carregar a página</td><td class="kv"><span class="kv-check">✓</span> No PLAY</td></tr>
+          <tr><td>Cliques repetidos da mesma pessoa</td><td>Regra varia por plataforma</td><td class="kv"><span class="kv-check">✓</span> Conta como 1 view</td></tr>
+          <tr><td>Teste inicial</td><td>Depende do plano</td><td class="kv"><span class="kv-check">✓</span> 50 views grátis</td></tr>
         </tbody>
-
       </table>
-
     </div>
-
   </div>
-
-
-  <!-- CTA -->
 
   <div class="cta-section">
-
-    <h2>
-      QUER TESTAR NA PRÁTICA?
-    </h2>
-
-    <p class="cta-sub">
-      Teste o modelo de contabilização por PLAY e veja como a KVPlayer
-      funciona na sua própria operação.
-    </p>
-
-    <a
-      href="https://www.kvplayer.com?ref=erikvplayer"
-      class="btn"
-    >
-      QUERO TESTAR A KVPLAYER
-    </a>
-
-    <p class="small">
-      Ativação imediata • 50 views grátis • Modelo pré-pago
-    </p>
-
+    <h2>QUER TESTAR NA PRÁTICA?</h2>
+    <p class="cta-sub">Teste o modelo de contabilização por PLAY e veja como a KVPlayer funciona na sua própria operação.</p>
+    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn">QUERO TESTAR A KVPLAYER</a>
+    <p class="small">Ativação imediata • 50 views grátis • Modelo pré-pago</p>
   </div>
-
-
-  <!-- FAQ -->
 
   <div class="faq">
-
-    <h2>
-      DÚVIDAS FREQUENTES
-    </h2>
-
-
-    <div class="faq-item">
-
-      <div class="faq-question">
-        “PRECISO PAGAR MENSALIDADE?”
-      </div>
-
-      <div class="faq-answer">
-        Não. A proposta da KVPlayer é trabalhar com modelo pré-pago.
-      </div>
-
-    </div>
-
-
-    <div class="faq-item">
-
-      <div class="faq-question">
-        “E SE A PESSOA NÃO DER PLAY?”
-      </div>
-
-      <div class="faq-answer">
-        Segundo o modelo informado pela KVPlayer, a visualização só é
-        contabilizada após o clique no PLAY.
-      </div>
-
-    </div>
-
-
-    <div class="faq-item">
-
-      <div class="faq-question">
-        “E SE ELA CLICAR VÁRIAS VEZES?”
-      </div>
-
-      <div class="faq-answer">
-        A regra apresentada é que múltiplos cliques da mesma pessoa
-        não geram múltiplas visualizações.
-      </div>
-
-    </div>
-
-
-    <div class="faq-item">
-
-      <div class="faq-question">
-        “POSSO TESTAR ANTES?”
-      </div>
-
-      <div class="faq-answer">
-        Sim. O cadastro oferece 50 views gratuitas para você testar a plataforma.
-      </div>
-
-    </div>
-
+    <h2>DÚVIDAS FREQUENTES</h2>
+    <div class="faq-item"><div class="faq-question">“PRECISO PAGAR MENSALIDADE?”</div><div class="faq-answer">Não. A proposta da KVPlayer é trabalhar com modelo pré-pago.</div></div>
+    <div class="faq-item"><div class="faq-question">“E SE A PESSOA NÃO DER PLAY?”</div><div class="faq-answer">A visualização só é contabilizada após o clique no PLAY.</div></div>
+    <div class="faq-item"><div class="faq-question">“E SE ELA CLICAR VÁRIAS VEZES?”</div><div class="faq-answer">Múltiplos cliques da mesma pessoa não geram múltiplas visualizações.</div></div>
+    <div class="faq-item"><div class="faq-question">“POSSO TESTAR ANTES?”</div><div class="faq-answer">Sim. O cadastro oferece 50 views gratuitas para você testar.</div></div>
   </div>
-
-
-  <!-- FINAL -->
 
   <div class="cta-section">
-
-    <h2>
-      SEU PLAYER NÃO PRECISA SER MAIS UM CUSTO FIXO
-    </h2>
-
-    <p class="cta-sub">
-      Você já investe em tráfego, página e VSL.
-      Teste uma alternativa com modelo pré-pago e contabilização baseada no PLAY.
-    </p>
-
-    <a
-      href="https://www.kvplayer.com?ref=erikvplayer"
-      class="btn"
-    >
-      QUERO MINHAS 50 VIEWS GRÁTIS
-    </a>
-
-    <p class="small">
-      Teste a KVPlayer • 50 views grátis • Sem mensalidade recorrente
-    </p>
-
+    <h2>SEU PLAYER NÃO PRECISA SER MAIS UM CUSTO FIXO</h2>
+    <p class="cta-sub">Você já investe em tráfego, página e VSL. Teste uma alternativa com modelo pré-pago e contabilização baseada no PLAY.</p>
+    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn">QUERO MINHAS 50 VIEWS GRÁTIS</a>
+    <p class="small">Teste a KVPlayer • 50 views grátis • Sem mensalidade recorrente</p>
   </div>
-
 </div>
-
 </body>
   </html>
