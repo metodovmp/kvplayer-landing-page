@@ -7,8 +7,9 @@
 <style>
   body{margin:0;background:#000;font-family:'Inter',sans-serif;color:#fff}
   .container{max-width:900px;margin:0 auto;padding:40px 20px 70px}
-  .logo{text-align:center;font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:2px;font-size:22px;margin-bottom:40px}
+  .logo{text-align:center;font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:2px;font-size:22px;margin-bottom:8px}
   .logo span{background:linear-gradient(90deg,#00F5FF,#00FF88);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .partner-badge{text-align:center;color:#00F5FF;font-size:11px;letter-spacing:2px;font-family:'Montserrat',sans-serif;font-weight:700;margin-bottom:35px;opacity:0.9}
   h1{font-family:'Montserrat',sans-serif;font-weight:900;font-size:42px;line-height:1.1;text-align:center;color:#fff;text-transform:uppercase;margin:0}
   .sub{color:#C7C7CC;text-align:center;font-size:18px;margin:18px auto 0;line-height:1.55;max-width:780px}
   .sub strong{color:#fff}
@@ -38,35 +39,41 @@
   td{color:#C7C7CC;font-size:14px;line-height:1.4}
   td.kv{color:#fff;font-weight:700}
   .kv-check{color:#00FF88;font-weight:800}
+  .pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:35px}
+  .price-card{background:#050A14;border:1px solid #1A2333;border-radius:12px;padding:22px;text-align:center}
+  .price-plays{font-family:'Montserrat',sans-serif;font-weight:900;font-size:22px;color:#fff}
+  .price-value{color:#00FF88;font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;margin:8px 0}
+  .price-desc{color:#888;font-size:12px;margin-bottom:14px}
   .cta-section{margin-top:80px;border-top:1px solid #111;padding-top:60px;text-align:center}
   .cta-sub{color:#C7C7CC;font-size:16px;line-height:1.6;max-width:650px;margin:0 auto}
-  .btn-oval{display:inline-block;background:linear-gradient(90deg,#00F5FF,#00FF88);color:#000;font-family:'Montserrat',sans-serif;font-weight:900;padding:21px 48px;border-radius:999px;text-decoration:none;text-transform:uppercase;margin-top:30px;transition:0.3s;box-shadow:0 8px 25px rgba(0,245,255,0.35);letter-spacing:0.5px;font-size:15px}
+  .btn-oval{display:inline-block;background:linear-gradient(90deg,#00F5FF,#00FF88);color:#000;font-family:'Montserrat',sans-serif;font-weight:900;padding:21px 48px;border-radius:999px;text-decoration:none;text-transform:uppercase;margin-top:10px;transition:0.3s;box-shadow:0 8px 25px rgba(0,245,255,0.35);letter-spacing:0.5px;font-size:15px}
   .btn-oval:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 12px 35px rgba(0,245,255,0.55)}
+  .btn-small{padding:12px 20px;font-size:13px;margin-top:12px}
   .small{color:#666;font-size:13px;margin-top:16px}
   .faq{margin-top:80px;border-top:1px solid #111;padding-top:60px}
   .faq-item{border-bottom:1px solid #1A2333;padding:22px 0}
   .faq-question{font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;color:#fff;margin-bottom:8px}
   .faq-answer{color:#C7C7CC;font-size:15px;line-height:1.6}
+  .footer{margin-top:80px;border-top:1px solid #111;padding-top:30px;text-align:center;color:#555;font-size:12px;line-height:1.6}
+  .footer a{color:#777;text-decoration:underline}
   @media(max-width:600px){.container{padding:30px 16px 50px}h1{font-size:30px}.sub{font-size:16px}h2{font-size:23px}.question{font-size:20px}.btn-oval{width:100%;box-sizing:border-box;padding:20px 20px;font-size:14px}}
 </style>
 </head>
 <body>
 <div class="container">
   <div class="logo">KV<span>PLAYER</span></div>
+  <div class="partner-badge">SITE DE PARCEIRO AUTORIZADO • KVPLAYER PRÉ-PAGO</div>
   <h1>PARE DE PAGAR MENSALIDADE E DE DESPERDIÇAR VIEWS</h1>
   <p class="sub">Um player pré-pago em que a visualização só é contabilizada quando o visitante clica no PLAY.<br><strong>Sem mensalidade. Sem gastar seu saldo com quem nem deu PLAY.</strong></p>
-
   <div class="vsl-eyebrow">DÊ O PLAY E ENTENDA COMO ECONOMIZAR SEU SALDO EM 47s</div>
   <div class="vsl-wrapper">
     <script src="https://scripts.kvplayer.com/player/kvplayer.js" data-api-url="https://api.kvplayer.com"></script>
     <kv-player id="a45ad0c712" data-uuid="ac40a9a3-3e23-439c-a402-48d18aa9f22f" orientation="horizontal"></kv-player>
   </div>
-
   <div class="cta-center">
     <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval">QUERO MINHAS 50 VIEWS GRÁTIS →</a>
     <p class="small">Ativação imediata • Teste gratuito • Sem mensalidade</p>
   </div>
-
   <div class="section">
     <h2>SE VOCÊ TRABALHA COM VSL, <span>CADA VIEW TEM UM CUSTO</span></h2>
     <div class="problem">
@@ -79,55 +86,28 @@
       <div class="mechanism-title">CLICK REAL</div>
       <p>Na KVPlayer, o modelo é simples: <strong>o play precisa acontecer para a visualização ser contabilizada.</strong></p>
       <p style="margin-top:15px;">E se a mesma pessoa clicar novamente, <strong>a visualização não é contada novamente.</strong></p>
-      <p style="margin-top:15px;">Seu saldo fica mais alinhado com quem realmente iniciou o vídeo.</p>
     </div>
   </div>
-
   <div class="section">
-    <h2>E TEM MAIS: <span>VOCÊ NÃO FICA PRESO A UMA MENSALIDADE</span></h2>
-    <div class="grid-3">
-      <div class="card"><div class="card-num">01 — CLICK REAL</div><h3>View só no Play</h3><p>A view é contabilizada quando o visitante efetivamente dá PLAY.</p></div>
-      <div class="card"><div class="card-num">02 — PRÉ-PAGO</div><h3>Use quando precisar</h3><p>Compre o pacote que faz sentido para sua operação. Sem mensalidade recorrente.</p></div>
-      <div class="card"><div class="card-num">03 — 50 VIEWS GRÁTIS</div><h3>Teste antes de escalar</h3><p>Cadastre-se e tenha 50 views gratuitas para testar a plataforma.</p></div>
+    <h2>ESCOLHA SEU PACOTE <span>PRÉ-PAGO</span></h2>
+    <div class="pricing-grid">
+      <div class="price-card"><div class="price-plays">500 Plays</div><div class="price-value">A partir de R$ 47</div><div class="price-desc">Ideal pra testar</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
+      <div class="price-card"><div class="price-plays">1.000 Plays</div><div class="price-value">Mais popular início</div><div class="price-desc">Para validar VSL</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
+      <div class="price-card"><div class="price-plays">3.000 Plays</div><div class="price-value">Melhor custo/benefício</div><div class="price-desc">Operação rodando</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
+      <div class="price-card"><div class="price-plays">7.000 Plays</div><div class="price-value">Escala</div><div class="price-desc">Tráfego alto</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
+      <div class="price-card"><div class="price-plays">10.000 Plays</div><div class="price-value">Alta escala</div><div class="price-desc">Player principal</div><a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval btn-small">ATIVAR</a></div>
     </div>
   </div>
-
-  <div class="section">
-    <h2>ENTENDA A DIFERENÇA</h2>
-    <div class="comparison">
-      <table>
-        <thead><tr><th>Característica</th><th>Players com mensalidade</th><th>KVPlayer</th></tr></thead>
-        <tbody>
-          <tr><td>Modelo de pagamento</td><td>Mensalidade recorrente</td><td class="kv"><span class="kv-check">✓</span> Pré-pago</td></tr>
-          <tr><td>Quando a view é contabilizada</td><td>Normalmente ao carregar a página</td><td class="kv"><span class="kv-check">✓</span> No PLAY</td></tr>
-          <tr><td>Cliques repetidos da mesma pessoa</td><td>Regra varia por plataforma</td><td class="kv"><span class="kv-check">✓</span> Conta como 1 view</td></tr>
-          <tr><td>Teste inicial</td><td>Depende do plano</td><td class="kv"><span class="kv-check">✓</span> 50 views grátis</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <div class="cta-section">
-    <h2>QUER TESTAR NA PRÁTICA?</h2>
-    <p class="cta-sub">Teste o modelo de contabilização por PLAY e veja como a KVPlayer funciona na sua própria operação.</p>
-    <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval">QUERO TESTAR A KVPLAYER</a>
-    <p class="small">Ativação imediata • 50 views grátis • Modelo pré-pago</p>
-  </div>
-
-  <div class="faq">
-    <h2>DÚVIDAS FREQUENTES</h2>
-    <div class="faq-item"><div class="faq-question">“PRECISO PAGAR MENSALIDADE?”</div><div class="faq-answer">Não. A proposta da KVPlayer é trabalhar com modelo pré-pago.</div></div>
-    <div class="faq-item"><div class="faq-question">“E SE A PESSOA NÃO DER PLAY?”</div><div class="faq-answer">A visualização só é contabilizada após o clique no PLAY.</div></div>
-    <div class="faq-item"><div class="faq-question">“E SE ELA CLICAR VÁRIAS VEZES?”</div><div class="faq-answer">Múltiplos cliques da mesma pessoa não geram múltiplas visualizações.</div></div>
-    <div class="faq-item"><div class="faq-question">“POSSO TESTAR ANTES?”</div><div class="faq-answer">Sim. O cadastro oferece 50 views gratuitas.</div></div>
-  </div>
-
   <div class="cta-section">
     <h2>SEU PLAYER NÃO PRECISA SER MAIS UM CUSTO FIXO</h2>
-    <p class="cta-sub">Você já investe em tráfego, página e VSL. Teste uma alternativa com modelo pré-pago e contabilização baseada no PLAY.</p>
+    <p class="cta-sub">Teste o modelo pré-pago com contabilização baseada no PLAY.</p>
     <a href="https://www.kvplayer.com?ref=erikvplayer" class="btn-oval">QUERO MINHAS 50 VIEWS GRÁTIS</a>
-    <p class="small">Teste a KVPlayer • 50 views grátis • Sem mensalidade recorrente</p>
+  </div>
+  <div class="footer">
+    Este site é de um PARCEIRO AUTORIZADO da KVPlayer e não é o site oficial.<br>
+    Site oficial: <a href="https://www.kvplayer.com?ref=erikvplayer" target="_blank">kvplayer.com</a> | KVPlayer® é marca registrada.<br>
+    Pacotes e valores sujeitos à tabela oficial da plataforma.
   </div>
 </div>
 </body>
-                            </html>
+  </html>
